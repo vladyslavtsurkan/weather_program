@@ -35,13 +35,13 @@ def print_weather_data_in_console(
         wind_gust: float,
 ) -> None:
     print(
-        f'Current time: {Fore.GREEN}{utc_to_local(current_time)}{Fore.RESET}\n'
+        f'Current time: {Fore.GREEN}{utc_to_local(current_time).time()}{Fore.RESET}\n'
         f'Your location: {Fore.RED}{location}{Fore.RESET}.\n'
         f'Temperature: {Fore.BLUE}{temp}°C{Fore.RESET}, feels like: {Fore.BLUE}{feels_like}°C{Fore.RESET}\n'
         f'Wind speed: {Fore.CYAN}{wind_speed}m/s{Fore.RESET}. Wind gust: {Fore.CYAN}{wind_gust}m/s{Fore.RESET}\n'
         f'Humidity: {Fore.YELLOW}{humidity}%{Fore.RESET}. Pressure: {Fore.YELLOW}{pressure} Pa{Fore.RESET}\n'
-        f'Sunrise: {Fore.GREEN}{utc_to_local(sunrise_time)}{Fore.RESET}. '
-        f'Sunset: {Fore.GREEN}{utc_to_local(sunset_time)}{Fore.RESET}'
+        f'Sunrise: {Fore.GREEN}{utc_to_local(sunrise_time).time()}{Fore.RESET}. '
+        f'Sunset: {Fore.GREEN}{utc_to_local(sunset_time).time()}{Fore.RESET}'
     )
     print('Current weather:')
     for weather in weather_info:
